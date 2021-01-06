@@ -1,0 +1,40 @@
+@startuml
+
+abstract class Shape {
+  
+  
+  -Area()
+  -Perimeter()
+  +CheckIfArgsAreGreaterThanZero(params double[] args)
+}
+
+class Circle {
+  -Radius
+}
+class Rectangle {
+  -Side1
+  -Side2
+}
+class Square {
+  -Side1
+  -Side2=Side1
+}
+class Triangle {
+  -SideA
+  -SideB
+  -SideC
+}
+class EquilateralTriangle {
+  -SideA  
+}
+
+
+
+Shape -down- Circle
+Rectangle -down- Square
+Shape -down- Rectangle
+Shape -down- RegularPentagon
+Shape -down- Triangle
+Triangle -down- EquilateralTriangle
+
+@enduml

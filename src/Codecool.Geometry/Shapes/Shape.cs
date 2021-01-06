@@ -28,7 +28,17 @@ namespace Codecool.Geometry.Shapes
         /// <returns>True if all of args are greater than 0</returns>
         public static bool CheckIfArgsAreGreaterThanZero(params double[] args)
         {
-            throw new NotImplementedException();
+            bool greaterThanZero = true;
+            foreach (double arg in args)
+            {
+                if (arg < 0)
+                {
+                    greaterThanZero = false;
+                    break;
+                }
+            }
+
+            return greaterThanZero;
         }
 
         /// <summary>

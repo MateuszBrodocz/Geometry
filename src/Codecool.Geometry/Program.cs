@@ -1,4 +1,6 @@
-﻿namespace Codecool.Geometry
+﻿using Codecool.Geometry.Shapes;
+
+namespace Codecool.Geometry
 {
     /// <summary>
     ///     This is the main class of your program which contains Main method
@@ -12,7 +14,8 @@
         public static void Main(string[] args)
         {
             bool isRunning = true;
-
+            RegularPentagon regularPentagon = new RegularPentagon(2);
+            double area = regularPentagon.Area;
             while (isRunning)
             {
                 int option = 0;  // TODO read the keyboard here
@@ -37,6 +40,7 @@
                     case 0:
                         // TODO Exit
                         break;
+                        Shape.CheckIfArgsAreGreaterThanZero();
                 }
             }
         }
